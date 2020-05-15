@@ -1,0 +1,28 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h2 class="display-4" style="color: white; font-weight: 700;">Dynamic dashboard</h2>
+</div>
+<div class="iframe my-5" style="height: 80vh;">
+    <iframe src="http://34.78.229.177" frameBorder="0" style="width: 100vw; height: 100%; background-color: white;"></iframe>
+</div>
+
+<section class="explenation mb-5">
+    <div class="container">
+        <div class="text-left">
+            <h4 class="display-4" style="color: white; font-weight: 700;">Explenation</h4>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius, iste impedit amet distinctio perferendis voluptas error, non illo voluptatem iusto magnam! Optio fuga voluptatibus, reiciendis quo error nihil possimus?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis harum cumque placeat veniam quis exercitationem voluptates maxime possimus, porro quos officiis maiores quaerat esse dolorem ut enim. Delectus, quo.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
