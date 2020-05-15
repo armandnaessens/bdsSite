@@ -1,0 +1,73 @@
+.registreer{
+
+}
+.keuzecontainer{
+    /* background-color: green; */
+}
+.keuzebtn{
+    height: 4em;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* background-color: green; */
+}
+.keuzebtn p{
+    font-weight: 400;
+    font-size: 1.6em;
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+    /* margin: auto; */
+}
+.keuzebtn:hover{
+    background-color: #014E4E;
+    color: white;
+}
+.Highlighted{
+    background-color: #014E4E;
+    color: white;
+}
+.registreerinfo{
+    background-color: white;
+}
+.registreerinfo .tussenHR{
+    margin-left: 0;
+}
+.registreerinfop{
+    color: #014E4E;
+    font-size: 1.2em;
+}
+
+.collectionsContainer{
+    width: 100%;
+    background-color: white;
+    min-height: 20vh;
+}
+.collectionItem{
+    /* background-color: green; */
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+.collectionItem:hover{
+    background-color: #014E4E;
+    color: white;
+}
+.collectionItem p{
+    font-weight: 400;
+    font-size: 1.3em;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    /* margin: auto; */
+}
+
+.formContainer{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.productRow{
+   
+}

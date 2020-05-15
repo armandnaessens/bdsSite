@@ -1,0 +1,156 @@
+.bigPictureContainer{
+    /* background-color: green; */
+    width: 100%;
+    height: 20em;
+    margin:0;
+    padding:0;
+}
+.bigPicture{
+    height: 100%;
+    /* background-color: gray; */
+}
+.smallPictureContainer{
+    width: 100%;
+    /* margin-left: 10%; */
+    height: 100%;
+    /* background-color: green; */
+    padding: 0;
+    margin: 0;
+}
+.smallPicture{
+    height: 10em;
+    background-color: gray;
+}
+.leftSide{
+    height: 100%;
+}
+.rightSide{
+    height: 100%;
+}
+.leftSide .row{
+
+}
+
+
+
+.smallPicturesContainer{
+    height: 40%;
+    width: 100%;
+}
+
+.productDescription h1{
+    font-weight: 700;
+}
+
+
+.productRow{
+    /* min-height: 50vh; */
+}
+.productContent{
+    padding-bottom: 3rem!important;
+    background-color: white;
+}
+.prijs{
+    margin: 0;
+    padding: 0;
+}
+.ledenprijs{
+    color: #014E4E;
+}
+.bovenste{
+    padding-top: 3em;
+}
+.description{
+    width: 80%;
+    padding-top: 3em;
+    /* background-color: green; */
+}
+.maat{
+    font-weight: 400;
+    color: #014E4E;
+}
+.maatTitel{
+    padding: 0!important;
+}
+.maatUitleg{
+    margin: 0!important;
+    padding: 0!important;
+    width: 80%!important;
+}
+.rightSide .tussenHR{
+    margin-left: 0;
+    /* margin-top: -10px; */
+}
+.relatedContent .card{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    min-height: 20em;
+    box-shadow: none!important;
+    position: relative;
+
+}
+.relatedContent .cardHeader{
+    width: 100%;
+    /* min-height: 200px; */
+    height: 10em;
+    padding-top: 1em;
+    /* background-color: grey; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.relatedContent .cardContent h4{
+    font-weight: 500;
+    color: #014E4E;
+    margin: 0;
+}
+.relatedContent .cardContent p{
+    font-weight: 500;
+    color: #014E4E;
+    margin: 0;
+}
+.relatedContent .cardFooter{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.cardImage{
+    max-width: 100%;
+    max-height: 100%;
+}
+.relatedContent .card .priceRow{
+    text-align: right;
+    width: 100%;
+}
+
+.formContainer{
+    width: 80%;
+    margin-left: 10%;
+}
+@media screen and (min-width:800px){
+    .headImage{
+        height: 20em;
+    }
+}
+@media screen and (max-width:800px){
+    .productDescription{
+        padding-top: 2rem;
+
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .prijsRechts{
+        text-align: right;
+    }
+
+    .headImage{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+}

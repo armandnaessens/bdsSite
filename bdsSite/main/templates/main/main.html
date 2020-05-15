@@ -1,0 +1,125 @@
+{% load static %}
+
+<!-- 
+This app is written in Django 
+Programmers: Bert Christiaens & Armand Naessens
+Time till first edition: 1 week & 180 combined working hours
+If you like this site, contact us through LinkedIn.
+If you dislike this site, contact us through LinkedIn too, we are very open to criticism.
+
+https://www.linkedin.com/in/bert-christiaens-0b0074151/
+https://www.linkedin.com/in/anaessens/
+
+Thx
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Corona</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Raleway&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/cookiealert.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-collapse navbar-dark white fixed-top scrolling-navbar" id="navtest">
+        <a class="navbar-brand " href="#">
+            <!-- <img id="brandid"  src="{% static 'img/movix_logo-05.png'%}"> -->
+        </a> 
+
+        <button class="navbar-toggler" id="testtoggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="naarRechts">
+
+            <div class="collapse navbar-collapse pull-right " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-0 ">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#abouthr" id="aboutbtn">About Us</a>
+                    </li> -->
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="" id="focusbtn">Home</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                    <a class="nav-link" href="" id="focusbtn">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" id="teambtn">Dynamic dashboard</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+    <div class="content">
+        <div class="content-container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+
+
+
+    <footer class="page-footer  font-small darken-3">
+
+
+      
+        <!-- Copyright -->
+        <div class=" text-center py-3">© <span id="huidigJaar"></span> 
+         
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+
+      <!-- START Bootstrap-Cookie-Alert -->
+    {% if user.is_authenticated == False %}
+    <div class="alert text-center cookiealert" role="alert">
+       &#x1F36A; WIj gebruiken cookies om u optimaal te kunnen bijstaan. Kom <a href="https://www.goed.be/nl/cookiepolicy" target="_blank">hier</a> meer te weten.
+
+      <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+          Ik ga akkoord
+      </button>
+    </div>
+    {% endif %}
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/fitty.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/cookiealert.js' %}"></script>
+    <script>
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide')
+        });
+    </script>
+    <script>
+        var d = new Date();
+        var n = d.getFullYear();
+        document.getElementById("huidigJaar").innerHTML = n;
+    </script>
+    <script>
+        // fitty('#winkelwagenFit');
+    </script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

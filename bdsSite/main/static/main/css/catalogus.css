@@ -1,0 +1,63 @@
+.collectionsContainer{
+    width: 100%;
+    background-color: white;
+    min-height: 20vh;
+}
+.collectionItem{
+    /* background-color: green; */
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+.collectionItem:hover{
+    background-color: #014E4E;
+    color: white;
+}
+.collectionItem p{
+    font-weight: 400;
+    font-size: 1.3em;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    /* margin: auto; */
+}
+
+.fastChoicesContent .card{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    min-height: 20em;
+    box-shadow: none!important;
+    position: relative;
+
+}
+.fastChoicesContent .cardHeader{
+    width: 100%;
+    /* min-height: 200px; */
+    height: 10em;
+    padding-top: 1em;
+    /* background-color: grey; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.fastChoicesContent .cardImage{
+    max-width: 100%;
+    max-height: 100%;
+}
+.fastChoicesContent .cardContent h4{
+    font-weight: 500;
+    color: #014E4E;
+    margin: 0;
+}
+.fastChoicesContent .cardContent p{
+    font-weight: 500;
+    color: #014E4E;
+    margin: 0;
+}
+.fastChoicesContent .cardFooter{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

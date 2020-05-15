@@ -1,0 +1,128 @@
+
+:root {
+    --body-color:#1DA1F2;
+    --body-font-color: #FFF;
+    --navbar-font-color: #1DA1F2;
+    --footer-font-color: #1DA1F2;
+    --navbar-color: #FFF;
+    --footer-color: #FFF;
+}
+
+body{
+    background-color: var(--body-color);
+    height: 100%;
+
+}
+h1 h2 h3 h4 h5 h6{
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-family: 'Raleway', sans-serif!important;
+    color: var(--body-font-color);
+}
+span{
+    font-family: 'Raleway', sans-serif!important;
+    
+}
+.navbar{
+    height: 10vh;
+    background-color:var(--navbar-color)!important;
+    color: var(--navbar-font-color)!important;
+}
+.navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link{
+    color: var(--navbar-font-color)!important;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover{
+    color: var(--navbar-font-color)!important;
+}
+.nav-link{
+    color: var(--navbar-font-color)!important;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+.page-footer{
+    background-color: var(--footer-color)!important;
+    color: var(--footer-font-color)!important;
+    left: 0;
+    right: 0;
+    min-height: 10vh;
+    
+}
+h1 h2 h3 h4 h5 h6{
+    color: #014E4E;
+}
+.row{
+    margin: 0!important;
+}
+.btn{
+    border-radius: 20px;
+}
+
+.content{
+    padding-top: 10em;
+    padding-left: 0;
+    padding-right:0;
+    padding-bottom: 0;
+    width: 100%;
+    /* padding:0; */
+    min-height: 90vh;
+}
+
+/* .content .content-container{
+    margin-top: 10em;
+} */
+
+.btn-white{
+    background-color: #FFF!important;
+    border-radius: 0!important;
+    color : var(--body-color);
+    box-shadow: none!important;
+}
+.display-3{
+    font-weight: 400;
+    
+}
+.tussenHR{
+    width: 8%;
+    margin-left: 46%;
+    height: 2px;
+    background-color: #009999!important;
+    border-radius: 1px;
+}
+.tussenTitel .display-5{
+    font-weight: 400;
+    color: #014E4E;
+}
+
+@media screen and (max-width:800px){
+    #brandid{
+        width:100%;
+        max-width: 300px;
+    }
+    .navbar-brand{
+        width: 25%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .content{
+        margin-top: 5em!important;
+        /* margin-top: 80px; */
+        width: 100%;
+        padding:0;
+    }
+
+    .knop{
+        font-size: 0.6rem;
+    }
+
+    .knopi{
+        font-size: 0.8rem;
+    }
+}
+#brandid{
+    width:70%;
+    max-width: 300px;
+}

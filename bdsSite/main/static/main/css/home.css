@@ -1,0 +1,25 @@
+.head-text{
+    max-width: 60%;
+}
+
+.card{
+    background-color: white;
+    width: 80%;
+    min-height: 20vh;
+}
+
+.card .img-container{
+    background-color: rgb(204, 204, 204);
+    width: 70%;
+    margin-left: 15%;
+    min-height: 10em;
+}
+
+
+.card p{
+    color: #14171A;
+}
+
+.card span{
+    color: #14171A;
+}

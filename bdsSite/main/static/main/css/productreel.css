@@ -1,0 +1,39 @@
+.card{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    height: 90%;
+    box-shadow: none!important;
+    position: relative;
+
+}
+.cardHeader{
+    width: 100%;
+    /* min-height: 200px; */
+    height: 10em;
+    padding-top: 1em;
+    /* background-color: grey; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.cardImage{
+    max-width: 100%;
+    max-height: 100%;
+}
+.cardContent h4{
+    font-weight: 500;
+    color: #014E4E;
+    margin: 0;
+}
+.cardContent p{
+    font-weight: 500;
+    color: #014E4E;
+    margin: 0;
+}
+.cardFooter{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

@@ -1,0 +1,85 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+{% endblock %}
+{% block content %}
+<section class="header">
+    <div class="text-center">
+        <h2 class="display-4" style="color: white; font-weight: 700;">Corona & Twitter</h2>
+        <div class="head-text text-left container mt-5 px-5">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo dolorum labore eum. Illo, illum nam quibusdam molestias sint maiores, blanditiis non voluptatibus iusto, a cum itaque. Ipsum veritatis harum deleniti!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur ipsam nobis officiis hic dolore. Libero natus recusandae odio cum perferendis omnis vero optio dignissimos voluptas explicabo! Deserunt debitis impedit accusamus!</p>
+        </div>
+        <button class="btn btn-white mt-5">To the statistics!</button>
+    </div>
+</section>
+<section class="team my-5">
+    <div class="container">
+        <div class="text-left">
+            <h4 class="display-4" style="color: white; font-weight: 700;">The Team</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="container card-content">
+                        <div class="row">
+                            <div class="img-container my-3">
+
+                            </div>
+                        </div>
+                        <div class="text-content container">
+
+                            <div class="row">
+                                <h4 class="display-6 text-left" style="color: #1DA1F2; font-weight: 700;">Vic Degraeve</h4>
+                            </div>
+                            <div class="row">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quisquam fuga rem temporibus suscipit. Placeat natus ipsa porro nostrum, tenetur alias atque tempora, velit veritatis, quisquam voluptatum dicta impedit iusto.</p>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 colContact mb-1">
+                                    <i class="fas fa-envelope"></i>&emsp;&emsp;<span>vic.degraeve@ugent.be</span>
+                                </div>
+                                <div class="col-12 colContact mb-1">
+                                    <i class="fab fa-linkedin"></i>&emsp;<a href="http://www.linkedin.com" target="_blank">Linkedin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="container card-content">
+                        <div class="row">
+                            <div class="img-container my-3">
+
+                            </div>
+                        </div>
+                        <div class="text-content container">
+
+                            <div class="row">
+                                <h4 class="display-6 text-left" style="color: #1DA1F2; font-weight: 700;">Armand Naessens</h4>
+                            </div>
+                            <div class="row">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quisquam fuga rem temporibus suscipit. Placeat natus ipsa porro nostrum, tenetur alias atque tempora, velit veritatis, quisquam voluptatum dicta impedit iusto.</p>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 colContact mb-1">
+                                    <i class="fas fa-envelope"></i>&emsp;&emsp;<span>armand.naessens@ugent.be</span>
+                                </div>
+                                <div class="col-12 colContact mb-1">
+                                    <i class="fab fa-linkedin"></i>&emsp;&emsp;<a href="http://www.linkedin.com" target="_blank">Linkedin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% endblock %}
