@@ -63,7 +63,7 @@
     <div class="chart px-4 py-4 mt-3" >
         <canvas id="scatter"></canvas>
     </div>
-    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis autem amet earum quas tempora possimus eum itaque soluta hic mollitia ipsa vel molestiae incidunt accusantium facere consequatur reprehenderit, facilis ab.</p>
+    <p class="mt-3"></p>
     <p> </p>
 </div>
 
@@ -328,7 +328,18 @@
                 scales: {
                     xAxes: [{
                         type: 'linear',
-                        position: 'bottom'
+                        position: 'bottom',
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Before Corona period negativity index'
+                        }
+                    }],
+                    yAxes: [{
+                        type: 'linear',
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'During Corona period negativity index'
+                        }
                     }]
                 },
                 legend: {
