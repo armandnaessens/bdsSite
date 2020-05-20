@@ -5,3 +5,7 @@
 .chart{
     background-color: white;
 }
+
+iframe {
+    max-width: 100%!important;
+}
