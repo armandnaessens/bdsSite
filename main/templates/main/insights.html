@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block styles %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
 <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
 {% endblock %}
@@ -10,5 +11,59 @@
 <div class="text-center">
     <h2 class="display-4" style="color: white; font-weight: 700;">Insights</h2>
 </div>
+<div class="chartContainer container" >
+    <canvas id="canvas"></canvas>
+  </div>
 
+<p>{{test}}</p>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+    var barChartData = {
+        labels: {{excitementLabels|safe}},
+        datasets: [{
+            label: 'Rather indifferent',
+            backgroundColor: '#ff6384',
+            data: {{excitementIndifferent|safe}}
+        }, {
+            label: 'Strong optimists',
+            backgroundColor: '#36a2eb',
+            data: {{excitementOptimists|safe}}
+        }, {
+            label: 'Strong pessimists',
+            backgroundColor: '#cc65fe',
+            data: {{excitementPessimists|safe}}
+        }]
+
+    };
+    window.onload = function() {
+        var ctx = document.getElementById('canvas').getContext('2d');
+        window.myBar = new Chart(ctx, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                title: {
+                    display: true,
+                    text: 'Chart.js Bar Chart - Stacked'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false
+                },
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                    }],
+                    yAxes: [{
+                        stacked: true
+                    }]
+                }
+            }
+        });
+    };
+</script>
 {% endblock %}
