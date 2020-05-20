@@ -22,13 +22,17 @@ Thx
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/cookiealert.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+    <meta property="og:title" content="Twitter & Corona">
+    <meta property="og:image" content="https://emoji.beeimg.com/😃">
+
+
     {% block styles %}
     {% endblock %}
 </head>
@@ -49,18 +53,42 @@ Thx
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#abouthr" id="aboutbtn">About Us</a>
                     </li> -->
+                    {% if home %}
+                    <li class="nav-item selected mr-5">
+                        <a class="nav-link" href="{% url 'home'%}" id="focusbtn">Home</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{% url 'home'%}" id="focusbtn">Home</a>
                     </li>
-                    <li class="nav-item mr-5">
-                    <a class="nav-link" href="{% url 'insights'%}" id="focusbtn">Insights</a>
+                    {% endif %}
+                    {% if insights %}
+                        <li class="nav-item selected mr-5">
+                        <a class="nav-link" href="{% url 'insights'%}" id="focusbtn">Insights</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item mr-5">
+                            <a class="nav-link" href="{% url 'insights'%}" id="focusbtn">Insights</a>
+                        </li>
+                    {% endif %}
+                    {% if dashboard %}
+                    <li class="nav-item selected mr-5">
+                        <a class="nav-link" href="{% url 'dashboard'%}" id="teambtn">Dynamic dashboard</a>
                     </li>
+                    {% else %}
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{% url 'dashboard'%}" id="teambtn">Dynamic dashboard</a>
                     </li>
+                    {% endif %}
+                    {% if curtains %}
+                    <li class="nav-item selected">
+                        <a class="nav-link" href="{% url 'behindTheCurtains'%}" id="teambtn">Behind The Curtains</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'behindTheCurtains'%}" id="teambtn">Behind The Curtains</a>
                     </li>
+                    {% endif %}
                     
                 </ul>
             </div>
@@ -89,15 +117,7 @@ Thx
       </footer>
 
       <!-- START Bootstrap-Cookie-Alert -->
-    {% if user.is_authenticated == False %}
-    <div class="alert text-center cookiealert" role="alert">
-       &#x1F36A; WIj gebruiken cookies om u optimaal te kunnen bijstaan. Kom <a href="https://www.goed.be/nl/cookiepolicy" target="_blank">hier</a> meer te weten.
-
-      <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
-          Ik ga akkoord
-      </button>
-    </div>
-    {% endif %}
+    
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->

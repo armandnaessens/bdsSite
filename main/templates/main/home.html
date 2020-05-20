@@ -10,11 +10,11 @@
     <div class="text-center">
         <h2 class="display-4" style="color: white; font-weight: 700;">Corona & Twitter</h2>
         <div class="head-text text-left container mt-5 px-5">
-            <p>This website is made as a deliverable for the Big Data science Corona Virus project. The course that organised this project is Big Data Science (E018210) at the University of Ghent, Belgium</p>
-            <p>We wanted to analyse the impact of the Corona Virus on the sentiment of Twitter users in Flanders. To do this, we gathered more than 9 million tweets, from more than 10 thousand Flemish users. Afterwards we trained a modified BERT model to interpret the emotions in Flemish tweets. Please see the "Behind the curtains" page for more information </p>
-            <p>The insights page shows some clear graphs about key findings we found out in or data.</p>
-            <p>The dynamic dashboard page is where the fun really starts. Here you can go ahead and play with the data yourself. In the explanation under the dashboard, a clear discription of the functionalities is given.</p>
-            <p>Due to infrastructure problems, not all data could be gathered in time. To read more about this and other artefacts, we refer you to the disclaimer section on the behind the curtain page.</p>
+            <p>This website is made as a deliverable for the Big Data Science Corona Virus project. The course that organised this project is Big Data Science (E018210) at the University of Ghent, Belgium</p>
+            <p>The subject of this project was to use twitter data to come up with useful insights about the Corona Virus. Our approach to this project is that we wanted to analyse the impact of the Corona Virus on the sentiment of Twitter users in Flanders. To do this, we gathered more than 9 million tweets, from more than 10 thousand Flemish users. Afterwards we trained a modified BERT model to interpret the emotions in Flemish tweets. Please see the "Behind the curtains" page for more information </p>
+            <p><a class="font-weight-bold" href="{% url 'insights' %}" style="color: white; font-weight: bold;">The insights page</a> shows some clear graphs about key findings we found out in our data.</p>
+            <p><a href="{% url 'dashboard' %}" style="color: white; font-weight: bold;">The dynamic dashboard page</a> is where the fun really starts. Here you can go ahead and play with the data yourself. In the explanation under the dashboard, a clear description of the functionalities is given.</p>
+            <p>Due to infrastructure problems, not all data could be gathered in time. To read more about this and other artefacts, we refer you to the disclaimer section on the <a href="{% url 'behindTheCurtains' %}" style="color: white; font-weight: bold;">behind the curtain page.</a></p>
         </div>
         <a class="btn btn-white mt-5" href="{% url 'insights'%}">To the insights!</a>
     </div>
