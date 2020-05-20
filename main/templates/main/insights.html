@@ -8,12 +8,18 @@
 <link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
 {% endblock %}
 {% block content %}
-<div class="text-center">
+<!-- <div class="text-center">
     <h2 class="display-4" style="color: white; font-weight: 700;">Insights</h2>
+</div> -->
+<div class="mt-5 container chartContainer">
+    <div class="text-left">
+        <h1 class="" style="color: white; font-weight: 700;">The more affected, the more indifferent</h4>
+    </div>
+    <div class="chart px-4 py-4 mt-3" >
+        <canvas id="diffInExcitement"></canvas>
+    </div>
+    <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore id perferendis labore facilis quos quae eum ipsum eos quas nesciunt laudantium dignissimos sunt quisquam deserunt fuga odit, debitis optio! Sed!</p>
 </div>
-<div class="chartContainer container" >
-    <canvas id="canvas"></canvas>
-  </div>
 
 <p>{{test}}</p>
 
@@ -55,7 +61,7 @@
 
     };
     window.onload = function() {
-        var ctx = document.getElementById('canvas').getContext('2d');
+        var ctx = document.getElementById('diffInExcitement').getContext('2d');
         window.myBar = new Chart(ctx, {
             type: 'bar',
             data: barChartData,
