@@ -21,7 +21,9 @@ def insights(request):
         data=myfile.read()
     provinciedata = json.loads(data)
     provincie_df =  pd.DataFrame.from_dict(provinciedata)
-
+    with open('main/scatter.json','r') as myfile:
+         data=myfile.read()
+    scatterdata = json.loads(data)
     return render(request, 'main/insights.html',
     {'excitementLabels':provincie_df['provincie'].to_list(),
     'excitementIndifferent':provincie_df['ratio average'].to_list(),
@@ -31,6 +33,7 @@ def insights(request):
     'diffActivity':provincie_df['diff_activity'].to_list(),
     'diffRatio':provincie_df['diff_ratio'].to_list(),
     'diffNegativePeople':provincie_df['diff_for_negative_people'].to_list(),
+    'scatterdata':scatterdata,
     })
 
 def behindTheCurtains(request):
