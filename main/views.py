@@ -29,5 +29,6 @@ def insights(request):
     'excitementPessimists':provincie_df['ratio super pessimists'].to_list(),
     'hospitalizations100k':provincie_df['Hospitalizations per 100k inhabitants'].to_list(),
     'diffActivity':provincie_df['diff_activity'].to_list(),
-    'diffRatio':provincie_df['diff_ratio'].to_list()
+    'diffRatio':provincie_df['diff_ratio'].to_list(),
+    'diffNegativePeople':provincie_df['diff_for_negative_people'].to_list(),
     })

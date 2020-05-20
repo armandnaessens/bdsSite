@@ -36,7 +36,7 @@
         <h1 class="" style="color: white; font-weight: 700;">Negative people become more positive</h4>
     </div>
     <div class="chart px-4 py-4 mt-3" >
-        <canvas id="diffNegativity"></canvas>
+        <canvas id="diffNegPeople"></canvas>
     </div>
     <p class="mt-3"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore id perferendis labore facilis quos quae eum ipsum eos quas nesciunt laudantium dignissimos sunt quisquam deserunt fuga odit, debitis optio! Sed!</p>
 </div>
@@ -241,6 +241,17 @@
         }]
 
     };
+    var barChartData4 = {
+        labels: {{excitementLabels|safe}},
+        datasets: [ {
+            type: 'bar',
+            label: 'Change in negativity',
+            backgroundColor: '#ff6384',
+            yAxisID: 'y-axis-1',
+            data: {{diffNegativePeople|safe}}
+        }]
+
+    };
 
     window.onload = function() {
         var cty = document.getElementById('diffNegativity').getContext('2d');
@@ -298,6 +309,41 @@
 							display: true,
 							position: 'left',
 							id: 'y-axis-1',
+						}
+						]
+                }
+            }
+        });
+        var ctw = document.getElementById('diffNegPeople').getContext('2d');
+        window.negPeopl = new Chart(ctw, {
+            type: 'bar',
+            data: barChartData4,
+            
+            options: {
+                title: {
+                    display: false,
+                    text: 'Chart.js Bar Chart - Stacked'
+                },
+                elements: { point: { radius: 0 } },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false
+                },
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        
+                    }],
+                    yAxes: [{
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'left',
+							id: 'y-axis-1',
+                            ticks: {
+							    
+                                max:0
+							    
+						    }
 						}
 						]
                 }
