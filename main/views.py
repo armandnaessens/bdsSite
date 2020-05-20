@@ -28,4 +28,6 @@ def insights(request):
     'excitementOptimists':provincie_df['ratio super optimists'].to_list(),
     'excitementPessimists':provincie_df['ratio super pessimists'].to_list(),
     'hospitalizations100k':provincie_df['Hospitalizations per 100k inhabitants'].to_list(),
+    'diffActivity':provincie_df['diff_activity'].to_list(),
+    'diffRatio':provincie_df['diff_ratio'].to_list()
     })
