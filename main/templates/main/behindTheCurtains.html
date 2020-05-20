@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
 <div class="text-center">
-    <h2 class="display-4" style="color: white; font-weight: 700;">Behind The curtains</h2>
+    <h2 class="display-4" style="color: white; font-weight: 700;">Behind The Curtains</h2>
 </div>
 
 <section class="explenation mb-5">
@@ -20,9 +20,9 @@
         </div>
         {% endfor %}
         <div class="text-left">
-            <h4 class="display-4" style="color: white; font-weight: 700;">Disclaimers</h4>
+            <h4 class="display-4" style="color: white; font-weight: 700;">Disclaimers ⚠️</h4>
             {% for disclaimer in disclaimers %}
-            <div class="text-left mt-5">
+            <div class="text-left">
                 <h4 class="display-6" style="color: white; font-weight: 700;">{{disclaimer.name}}</h4>
                 {{disclaimer.text|linebreaks}}
             </div>
