@@ -17,35 +17,15 @@
 <section class="explenation mb-5">
     <div class="container">
         <div class="text-left">
-            <h4 class="display-4" style="color: white; font-weight: 700;">Explanation</h4>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius, iste impedit amet distinctio perferendis voluptas error, non illo voluptatem iusto magnam! Optio fuga voluptatibus, reiciendis quo error nihil possimus?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis harum cumque placeat veniam quis exercitationem voluptates maxime possimus, porro quos officiis maiores quaerat esse dolorem ut enim. Delectus, quo.</p>
+            <h4 class="display-4" style="color: white; font-weight: 700;">{{intro.name}}</h4>
+            {{intro.text|linebreaks}}
         </div>
-        <div class="text-left">
-            <h4 class="display-6" style="color: white; font-weight: 700;">Map</h4>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius, iste impedit amet distinctio perferendis voluptas error, non illo voluptatem iusto magnam! Optio fuga voluptatibus, reiciendis quo error nihil possimus?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis harum cumque placeat veniam quis exercitationem voluptates maxime possimus, porro quos officiis maiores quaerat esse dolorem ut enim. Delectus, quo.</p>
-        </div>
-        <div class="text-left">
-            <h4 class="display-6" style="color: white; font-weight: 700;">Time series</h4>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius, iste impedit amet distinctio perferendis voluptas error, non illo voluptatem iusto magnam! Optio fuga voluptatibus, reiciendis quo error nihil possimus?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis harum cumque placeat veniam quis exercitationem voluptates maxime possimus, porro quos officiis maiores quaerat esse dolorem ut enim. Delectus, quo.</p>
-        </div>
-        <div class="text-left">
-            <h4 class="display-6" style="color: white; font-weight: 700;">Negativity</h4>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius, iste impedit amet distinctio perferendis voluptas error, non illo voluptatem iusto magnam! Optio fuga voluptatibus, reiciendis quo error nihil possimus?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis harum cumque placeat veniam quis exercitationem voluptates maxime possimus, porro quos officiis maiores quaerat esse dolorem ut enim. Delectus, quo.</p>
-        </div>
-        <div class="text-left">
-            <h4 class="display-6" style="color: white; font-weight: 700;">Frequency</h4>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius, iste impedit amet distinctio perferendis voluptas error, non illo voluptatem iusto magnam! Optio fuga voluptatibus, reiciendis quo error nihil possimus?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis harum cumque placeat veniam quis exercitationem voluptates maxime possimus, porro quos officiis maiores quaerat esse dolorem ut enim. Delectus, quo.</p>
-        </div>
+        {% for topic in topics %}
+            <div class="text-left">
+                <h4 class="display-6" style="color: white; font-weight: 700;">{{topic.name}}</h4>
+                {{topic.text|linebreaks}}
+            </div>
+        {% endfor %}
     </div>
 </section>
 
