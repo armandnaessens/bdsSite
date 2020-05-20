@@ -32,3 +32,10 @@ def insights(request):
     'diffRatio':provincie_df['diff_ratio'].to_list(),
     'diffNegativePeople':provincie_df['diff_for_negative_people'].to_list(),
     })
+
+def behindTheCurtains(request):
+    explanations = Explanation.objects.all()
+    disclaimers = Disclaimer.objects.all()
+    return render(request, 'main/behindTheCurtains.html',
+    {'explanations':explanations,
+    'disclaimers':disclaimers})

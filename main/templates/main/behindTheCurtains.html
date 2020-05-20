@@ -1,0 +1,35 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h2 class="display-4" style="color: white; font-weight: 700;">Behind The curtains</h2>
+</div>
+
+<section class="explenation mb-5">
+    <div class="container">
+        {% for explanation in explanations %}
+        <div class="text-left">
+            <h4 class="display-4" style="color: white; font-weight: 700;">{{explanation.name}}</h4>
+            {{explanation.text|linebreaks}}
+        </div>
+        {% endfor %}
+        <div class="text-left">
+            <h4 class="display-4" style="color: white; font-weight: 700;">Disclaimers</h4>
+            {% for disclaimer in disclaimers %}
+            <div class="text-left mt-5">
+                <h4 class="display-6" style="color: white; font-weight: 700;">{{disclaimer.name}}</h4>
+                {{disclaimer.text|linebreaks}}
+            </div>
+        {% endfor %}
+        </div>
+    
+    </div>
+</section>
+
+{% endblock %}

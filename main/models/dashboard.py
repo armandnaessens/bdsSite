@@ -35,3 +35,39 @@ class Topic(models.Model):
         super(Topic,self).save(*args, **kwargs)
     def __str__(self):
         return " " + self.name 
+
+class Explanation(models.Model):
+    name = models.CharField(max_length=50)
+    text = models.TextField()
+    active = models.BooleanField(default = False)
+
+    def save(self, *args,**kwargs):
+        if self.active:
+            try:
+                temp = Explanation.objects.get(active = True)
+                if self != temp:
+                    temp.active = False
+                    temp.save()
+            except Explanation.DoesNotExist:
+                pass
+        super(Explanation,self).save(*args, **kwargs)
+    def __str__(self):
+        return " " + self.name 
+
+class Disclaimer(models.Model):
+    name = models.CharField(max_length=50)
+    text = models.TextField()
+    active = models.BooleanField(default = False)
+
+    def save(self, *args,**kwargs):
+        if self.active:
+            try:
+                temp = Disclaimer.objects.get(active = True)
+                if self != temp:
+                    temp.active = False
+                    temp.save()
+            except Disclaimer.DoesNotExist:
+                pass
+        super(Disclaimer,self).save(*args, **kwargs)
+    def __str__(self):
+        return " " + self.name 
