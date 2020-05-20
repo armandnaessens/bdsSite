@@ -25,16 +25,31 @@
     var barChartData = {
         labels: {{excitementLabels|safe}},
         datasets: [{
+            type: 'line',
+            label: 'Hospitalizations per 100k inhabitants',
+            borderWidth: 4,
+            fill: false,
+            backgroundColor: '#ffce56',
+            borderColor: '#ffce56',
+            yAxisID: 'y-axis-2',
+            data: {{hospitalizations100k|safe}}
+        }, {
+            type: 'bar',
             label: 'Rather indifferent',
             backgroundColor: '#ff6384',
+            yAxisID: 'y-axis-1',
             data: {{excitementIndifferent|safe}}
         }, {
+            type: 'bar',
             label: 'Strong optimists',
             backgroundColor: '#36a2eb',
+            yAxisID: 'y-axis-1',
             data: {{excitementOptimists|safe}}
-        }, {
+        },{
+            type: 'bar',
             label: 'Strong pessimists',
             backgroundColor: '#cc65fe',
+            yAxisID: 'y-axis-1',
             data: {{excitementPessimists|safe}}
         }]
 
@@ -59,8 +74,24 @@
                         stacked: true,
                     }],
                     yAxes: [{
-                        stacked: true
-                    }]
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+                            stacked: true,
+							position: 'left',
+							id: 'y-axis-1',
+						}, {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'right',
+							id: 'y-axis-2',
+							gridLines: {
+								drawOnChartArea: false
+							},
+                            ticks: {
+							    min: 0,
+							    
+						    }
+						}]
                 }
             }
         });

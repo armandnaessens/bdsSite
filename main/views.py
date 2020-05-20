@@ -21,6 +21,11 @@ def insights(request):
         data=myfile.read()
     provinciedata = json.loads(data)
     provincie_df =  pd.DataFrame.from_dict(provinciedata)
-    labels = []
 
-    return render(request, 'main/insights.html',{'excitementLabels':provincie_df['provincie'].to_list(),'excitementIndifferent':provincie_df['ratio average'].to_list(),'excitementOptimists':provincie_df['ratio super optimists'].to_list(),'excitementPessimists':provincie_df['ratio super pessimists'].to_list()})
+    return render(request, 'main/insights.html',
+    {'excitementLabels':provincie_df['provincie'].to_list(),
+    'excitementIndifferent':provincie_df['ratio average'].to_list(),
+    'excitementOptimists':provincie_df['ratio super optimists'].to_list(),
+    'excitementPessimists':provincie_df['ratio super pessimists'].to_list(),
+    'hospitalizations100k':provincie_df['Hospitalizations per 100k inhabitants'].to_list(),
+    })
