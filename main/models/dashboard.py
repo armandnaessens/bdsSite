@@ -33,6 +33,10 @@ class Topic(models.Model):
             except Topic.DoesNotExist:
                 pass
         super(Topic,self).save(*args, **kwargs)
+    
+    class Meta(object):
+        ordering = ['my_order']
+
     def __str__(self):
         return " " + self.name 
 
@@ -51,6 +55,10 @@ class Explanation(models.Model):
             except Explanation.DoesNotExist:
                 pass
         super(Explanation,self).save(*args, **kwargs)
+    
+    class Meta(object):
+        ordering = ['my_order']
+
     def __str__(self):
         return " " + self.name 
 
@@ -69,5 +77,9 @@ class Disclaimer(models.Model):
             except Disclaimer.DoesNotExist:
                 pass
         super(Disclaimer,self).save(*args, **kwargs)
+    
+    class Meta(object):
+        ordering = ['my_order']
+
     def __str__(self):
         return " " + self.name 
