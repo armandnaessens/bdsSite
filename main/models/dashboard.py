@@ -22,6 +22,7 @@ class Topic(models.Model):
     name = models.CharField(max_length=50)
     text = models.TextField()
     active = models.BooleanField(default = False)
+    my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     def save(self, *args,**kwargs):
         if self.active:
@@ -44,6 +45,7 @@ class Explanation(models.Model):
     name = models.CharField(max_length=50)
     text = models.TextField()
     active = models.BooleanField(default = False)
+    my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     def save(self, *args,**kwargs):
         if self.active:
@@ -66,6 +68,7 @@ class Disclaimer(models.Model):
     name = models.CharField(max_length=50)
     text = models.TextField()
     active = models.BooleanField(default = False)
+    my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     def save(self, *args,**kwargs):
         if self.active:
