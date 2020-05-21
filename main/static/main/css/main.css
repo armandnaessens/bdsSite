@@ -41,6 +41,24 @@ span{
     color: var(--navbar-font-color)!important;
     font-weight: 700;
     font-size: 1.4em;
+    
+}
+.nav-item{
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item .selected{
+    border-bottom: 3px solid var(--navbar-font-color);
+}
+.selected{
+    border-bottom: 3px solid var(--navbar-font-color);
+}
+
+.nav-item:hover{
+    /* background-color: rgb(250, 223, 200); */
+    /* background-color: white; */
+    border-bottom: 3px solid var(--navbar-font-color);
+    
 }
 .page-footer{
     background-color: var(--footer-color)!important;
