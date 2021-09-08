@@ -22,7 +22,7 @@ importlib-metadata==0.17
 numpy==1.17.3
 numpydoc==0.9.1
 pandas==0.25.3
-Pillow==6.2.1
+Pillow==8.3.2
 psycopg2==2.8.4
 psycopg2-binary==2.8.4
 ptyprocess==0.6.0
